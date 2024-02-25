@@ -15,9 +15,9 @@ One additional note that this program will yield the same performance, threadsaf
 Without taking further time, let us understand how to use this utility and how configure it for your business needs.
 
 # FAQs
-**QUESTION 1 - Example of how to obfuscate  sensitive data such as email, first/last name, phone number?**
+**QUESTION 1 - How to obfuscate  sensitive data such as email, first/last name, phone number?**
 
-Please see working example below.
+See working example below.
 
         String fn = "James";
         String ln = "Donald";
@@ -43,13 +43,13 @@ Please see working example below.
         (512) 788-9999 -> (341) 022-9999
 
 
-**QUESTION 2 - In the example above, why the first name, last name and full name does not match (_it may break the data integrity_). James converted to _Mtypx_, Donald convert to _Gjonbg_, I would expect James Donald should be “_Mtypx Gjonbg_” instead of “_Zbism Kqhbxk_”?**
+**QUESTION 2 - In the example above, why the first name, last name and full name does not match (_it may break the data integrity_). James converted to _Mtypx_, Donald convert to _Gjonbg_, I would expect _James Donald_ should be “_Mtypx Gjonbg_” instead of “_Zbism Kqhbxk_”?**
 
-As I mentioned above, the default combinations are set to 200 which means whenever you pass any input to  getObfuscated() method, based on the input it will create a hash value between 0 and 200. Based on the calculated hash, it will decide which combination to use. Since the hash is different for “_James_”, “_Donald_” and “_James Donald_”, combination selected to obfuscate the input value is different hence generated values are also different.
+As I mentioned above, the default combinations are set to 200 which means whenever you pass any input to getObfuscated() method, for each input it will create a hash value between 0 and 200. Based on the calculated hash, it will decide which combination to use. Since the hash is different for “_James_”, “_Donald_” and “_James Donald_”, combination selected to obfuscate the input value is different. Hence generated values are also different.
 
-**QUESTION 3 - Can I set the combination size to 1 to ensure it generates the same obfuscated value the each time?**
+**QUESTION 3 - Can I set the combination size from default 200 to 1 to ensure it generates the same obfuscated value the each time?**
 
-Yes you can but it is not recommended. If somebody can find that ‘J’ is converted to ‘M’ and ‘a’ to ‘t’ and so on, it will be very easy to reverse engineer and malicious actors can hack the system which definitely you don’ t want to do
+Yes you can and value can be passed an an argument to its constructors _(see question 9 below for constructor argument)_  but it is not **recommended**. If somebody can find that ‘J’ is converted to ‘M’ and ‘a’ to ‘t’ and so on, it will be very easy to reverse engineer and malicious actors can hack the system which definitely you don’ t want to do. See the next question on how to deal with this situation..
 
 **QUESTION 4 - I have a database table that has three columns, first_name, last_name and full_name. To ensure data integrity I need to ensure full_name should match with first_name/last_name individually, how can I achieve it?**
 
@@ -77,9 +77,9 @@ You can use another constructor, here is an example. Notice the second argument 
         System.out.println(name1+" -> "+obfuscateUtil.getObfuscated(name1));
         System.out.println(name2+" -> "+obfuscateUtil.getObfuscated(name2)); 
 
-**QUESTION 6 - Our production database has redundant values and especially the phone number formats are different in different place. For example one table has phone number as  _(123) 456-7890_ while another table has _+1 1234567890_. Is there a way to ensure same obfuscated value is being generated to ensure the data integrity?**
+**QUESTION 6 - Our production database has redundant data, especially the phone number formats are different in different place. For example one table has phone number as  _(123) 456-7890_ while another table has _+1 1234567890_. Is there a way to ensure same obfuscated value is being generated to ensure the data integrity?**
 
-Yes there is a way, you have to pass all the values in a list to ensure same hash is being used across all the value sin that list to yield the same result. Here is an example. Return value will also be List of String values
+Yes there is a way. You have to pass all the values in a list to ensure same hash is being used across all the values in that list to yield the same result. Here is an example. Return value will also be List of String values
 
         String ph1 = "(123) 456 7890";
         String ph2 = "+1 1234567890";
@@ -89,36 +89,35 @@ Yes there is a way, you have to pass all the values in a list to ensure same has
 
 **QUESTION 7 - I noticed there is another utility method that you called out above _getObfuscatedBySpace(String)_, how is this different from passing a list of elements?**
 
-Good question. When you pass list of string elements, you essentially use the same hash value that is being generated from the first list element to the rest of all the remaining list values.
+Good question. When you pass list of String elements, you essentially use the same hash value that is being generated from the first list element to the rest of all the remaining list values.
 
-But when you use   _getObfuscatedBySpace_() method instead, each word between white spaces are treated as individual input value that can yield separate hash value.
-You have to decide which option is suited for your need and invoke the right method accordingly. 
+But when you use   _getObfuscatedBySpace_() method instead, each word between white spaces are treated as individual input value that can yield separate hash value. You have to decide which option is suited for your need and invoke the right method accordingly. 
 
-In ideal situation if your database does not have redundant values you will never need to use any of these getObfuscatedBySpace() or  getObfuscated(List<String>) methods. They both should be condidered as helper methods.
+In ideal situation if your database does not have redundant values you will never need to use any of these getObfuscatedBySpace() or  getObfuscated(List<String>) methods. They both should be considered as the helper methods.
 
 **QUESTION 8 - Is this utility thread-safe?**
 
 Yes, you can invoke it simultaneously from multiple threads or processes. Object is also immutable in nature.
 
-**QUESTION 9 - In the examples above I noticed in the case of phone numbers, characters like _‘(‘_, _‘)’_, _‘+’_ did not change. Although this looks correct to maintain the readability but can I change it if required.**
+**QUESTION 9 - In the examples above I noticed for phone numbers, characters like _‘(‘_, _‘)’_, _‘+’_ did not change. Although this looks correct to maintain the readability but can I change the fules it if required.**
 
 Yes you can overwrite the rules as per your need. 
 
         Let us take one use case
-        Suppose you want vowels should be randomly shuffled with another vowels only
-        Numbers should be randomly shuffled with another number only but 0 value should remain unchanged
-        I want only 100 total combination (default is set to 200)
-        I want my program is limited to US keyboard character values only (from ascii 32 to 127)
-        Replace characters ‘(‘, ‘)’ with ‘|’
+        1. You want vowels should be randomly shuffled with another vowels only
+        2. Numbers should be randomly shuffled with another number only but 0 value should remain unchanged
+        3. You want only 100 total combination (default is set to 200)
+        4. You want the utiity is limited to US keyboard character values only (ascii from  32 to 127)
+        5. You want to replace characters ‘(‘, ‘)’ with ‘|’
         
 Here is the full code for the above use case: -  
 
         Map<List<int[]>, Integer> map = new LinkedHashMap<>(); // initialize the userMap 
-        map.put(Arrays.asList(new int[] { 'A', 'E', 'I', 'O', 'U' }), 1); // randomly shuffled vowels only, note second parameter as 1
-        map.put(Arrays.asList(new int[] { 'a', 'e', 'i', 'o', 'u' }), 1); // randomly shuffled vowels only, note second parameter as 1
+        map.put(Arrays.asList(new int[] { 'A', 'E', 'I', 'O', 'U' }), 1); // randomly shuffled vowels only uppercase, note second parameter as 1
+        map.put(Arrays.asList(new int[] { 'a', 'e', 'i', 'o', 'u' }), 1); // randomly shuffled vowels only lowercase, note second parameter as 1
         map.put(Arrays.asList(new int[] { '0' }), 1); // ensure 0 is replaced with 0
-        map.put(Arrays.asList(new int[] { '(', ')' }, new int[] { '|', '|'}), 1); // ensure to replace ‘(‘, ‘)’ with ‘|’
-        PJObfuscateUtil obfuscateUtilObj = new PJObfuscateUtil(100, map, 32, 127, true, 100); //instantiate the program
+        map.put(Arrays.asList(new int[] { '(', ')' }, new int[] { '|', '|'}), 1); // ensure to replace ‘(‘, ‘)’ with ‘|’. In this case you have pass second int[] and size must match. That is why we added '|' two times
+        PJObfuscateUtil obfuscateUtilObj = new PJObfuscateUtil(100, map, 32, 127, true, 100); //instantiate the utility
         String s1 = "(800) 334-5343";
         String s2 = "John j Jonny";
         String s3 = "Mike.cater@Gmail.Com";
@@ -128,20 +127,20 @@ Here is the full code for the above use case: -
 
 Please note the parameters passed in the constructors as follows: -
 
-        1. 1st Parameter is seed value (that can be any long number)
-        2. 2nd Parameter is the  LinkedHashMap. You can use it to overwrite the default behavior as needed for your need. In the int array you can either pass characters itself or it ASCII or Unicode value or the combination of all
-        3. 3rd and 4th parameters are start and end Index. It means only characters whose ASCII value falls in the range of 32 and 127 will be obfuscated and rest of them will be ignored or remain obfuscated. Passing the start and end index is critical to limit the memory foot front
+        1. 1st Parameter is the seed value (that can be any long number)
+        2. 2nd Parameter is the  LinkedHashMap. You can use it to overwrite the default rules for your need. In the int array you can either pass characters itself or its ASCII or Unicode value or the combination of character, ASCII, unicode
+        3. 3rd and 4th parameters are start and end Index. It means only characters whose ASCII value falls in the range of 32 and 127 will be obfuscated and rest of them will be ignored or remain unobfuscated. Passing the start and end index is critical to limit the memory footprint
         4. 5th parameter is isCaseInsensitiveObfuscate. If you wish to convert small and cap characters with same random character then pass this value as true
 
 **QUESTION 10 - Does it support _multilingual_ characters?**
 
-Yes it does, you can use any language or characters as you wish ensure to specify the correct start or end index value else such characters will remain as is. For details around character set and its ASCII/Unicode value, please refer this page
+Yes it does, you can use any language or characters as you wish. Please remember to specify the correct start or end index value else such characters will not be obfuscated. For details around character set and its ASCII/Unicode value, please refer this page
 
         https://www.ssec.wisc.edu/~tomw/java/unicode.html
 
-For the multilingual support, please note that I have implemented only for English and Devanagri. For rest of the languages, you can either add rules into getObfuscatedArray() method or pass it as userMap as constructor argument. I have not implemented this as I believe for each language you will like number to replace with numbers, upper-case to upper-case and lower-case to lower-case. There could be more semantics specific to the language. Since I am not an expert so decided to keep the rules empty and will look forward for your help and support and update the rules eventually.
+For the multilingual support, please note that I have implemented only for English and Devanagri. For rest of the languages, you can either add rules into getObfuscatedArray() method or pass it as map as constructor argument. I have not implemented this as I believe for each language you will like to replace numbers with numbers, upper-case to upper-case and lower-case to lower-case. There could be more semantics specific to the language. Since I am not an expert so decided to keep the rules empty and will look forward for your help and support and update the rules eventually.
 
-I have also added very basic rules for Arabic, Japanese, and Chinese language just to show how simple it is without going into language specific intricacies. If you need any help and support please send me an email 
+I have also added very basic rules for Arabic, Japanese, and Chinese language just to show how simple it is, without going into language specific intricacies. If you need any help and support please send me an email pajohri@yahoo.com
 
 
 **QUESTION 11 - Is this utility free to use?**

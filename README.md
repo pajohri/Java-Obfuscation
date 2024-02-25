@@ -100,7 +100,7 @@ In ideal situation if your database does not have redundant values you will neve
 
 Yes, you can invoke it simultaneously from multiple threads or processes. Object is also immutable in nature.
 
-**QUESTION 9 - In the examples above I noticed for phone numbers, characters like _‘(‘_, _‘)’_, _‘+’_ did not change. Although this looks correct to maintain the readability but can I change the rules it if required.**
+**QUESTION 9 - In the examples above I noticed for phone numbers, characters like _‘(‘_, _‘)’_, _‘+’_ did not change. Although this looks correct to maintain the readability but can I change the default rules**
 
 Yes you can overwrite the rules as per your need. 
 

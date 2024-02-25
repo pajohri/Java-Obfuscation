@@ -1,18 +1,19 @@
 # Java-Obfuscation Utility
-Java utility to Obfuscate any kind of sensitive data. Data obfuscation is the process of replacing sensitive information with data that looks like real production information, making it useless to malicious actors. It is primarily used to test test software, Data masking, encryption, and tokenization are three common data obfuscation techniques.
+Java utility to Obfuscate any kind of sensitive data. Data obfuscation is the process of replacing sensitive information with data that looks like real production information, making it useless to malicious actors. It is primarily used to test the software.
+_Data masking_, _encryption_, and _tokenization_ are three common data obfuscation techniques.
 
-This utility provides Data obfuscation (or data anonymization) using data masking techniques (replacing the real data with randomly generated fake data). You may create as many combinations as you want, the default is set to 200. There are two majors advantages with this technique: -
+This utility provides Data obfuscation (or data anonymization) using data _masking techniques _ only (_replacing the real data with randomly generated fake data_). You may create as many combinations as you want, the default is set to 200. There are two majors advantages with this technique: -
 
 1. Masked data is still usable in its obfuscated form and maintains the data integrity
 2. Once data is masked, the original values cannot be recovered.
 
-Since this is a lightweight standalone Java utility, it needs to be integrated with your ETL or any other system. Any values you wish to configure will be passed to this utility as constructor argument so you can maintain the way you wish without any additional overhead. You only need to have either JRE or JDK version 8 or above for this utility to work.
+Since this is a lightweight standalone Java utility, it needs to be integrated with your ETL or any other system. Any values you wish to configure will be passed to this utility as constructor argument so you can maintain the configuration values the way you wish without any additional overhead. You only need to have either JRE or JDK version 8 or above for this utility to work.
 
-For the data integrity, you must remember to use the exactly same version of the class along with exactly the same parameters passed through it constructor. At any point in time you take the newer version or modify its parameters, you must ensure to regenerate the obfuscated values across the entire dataset. 
+For the data integrity, you must remember to use the exactly same version of the utility along with exactly the same parameters passed through it constructor. At any point in time you take the newer version or modify its parameters, you must ensure to regenerate the obfuscated values across the entire dataset. 
 
-One additional note that this program will yield the same performance, threadsafe and you can obfuscate (any kind of sensitive data such as email, first/last name, phone number etc) billions on records in just few minutes.
+One additional note that this program will yield the same performance, it is thread-safe and you can obfuscate (_any kind of sensitive data such as email, first/last name, phone number etc_) billions on records in just few minutes.
 
-Without taking further time, let us understand how to use this utility and how configure it for your business needs.
+Without taking further time, let us understand how to use this utility and how configure it for your need
 
 # FAQs
 **QUESTION 1 - How to obfuscate  sensitive data such as email, first/last name, phone number?**
@@ -35,7 +36,7 @@ See working example below.
         System.out.println(phone+" -> "+obfuscateUtil.getObfuscated(phone));
 
 
-        Here is the output I got from this program: -
+        Here is the output I got from this utility: -
         James -> Mtypx
         Donald -> Gjonbg
         James Donald -> Zbism Kqhbxk
@@ -67,7 +68,7 @@ To get the desired output, for the full name, you need to use a utility method g
         System.out.println(email+" -> "+obfuscateUtil.getObfuscated(email));
         System.out.println(phone+" -> "+obfuscateUtil.getObfuscated(phone));        
 
-**QUESTION 5 - I tried to use this program and noticed that obfuscated values of “_James_” and “_james_” are not exactly same and it will break the data integrity, what should I do?**
+**QUESTION 5 - I tried to use this utility and noticed that obfuscated values of “_James_” and “_james_” are not exactly same and it will break the data integrity, what should I do?**
 
 You can use another constructor, here is an example. Notice the second argument _isCaseInsensitiveObfuscate_ which is set to **true** (default value is **false**): -
 

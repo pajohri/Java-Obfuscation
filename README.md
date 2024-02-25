@@ -26,7 +26,7 @@ See working example below.
         String email = "James.Donald@testdomain.com";     
         String phone = "(512) 788-9999";     
         //instantiate the class by passing a seed value. Seed value will ensure you get the same result. 
-        //If you change this seed value (any long type number) to a new number you will get a new set of result
+        //If you change this seed value to a new number you will get a new set of output
         PJObfuscateUtil obfuscateUtil = new PJObfuscateUtil(100);
         //invoke getObfuscated method to reterive the obfucated value
         System.out.println(fn+" -> "+obfuscateUtil.getObfuscated(fn));
@@ -100,7 +100,7 @@ In ideal situation if your database does not have redundant values you will neve
 
 Yes, you can invoke it simultaneously from multiple threads or processes. Object is also immutable in nature.
 
-**QUESTION 9 - In the examples above I noticed for phone numbers, characters like _‘(‘_, _‘)’_, _‘+’_ did not change. Although this looks correct to maintain the readability but can I change the fules it if required.**
+**QUESTION 9 - In the examples above I noticed for phone numbers, characters like _‘(‘_, _‘)’_, _‘+’_ did not change. Although this looks correct to maintain the readability but can I change the rules it if required.**
 
 Yes you can overwrite the rules as per your need. 
 

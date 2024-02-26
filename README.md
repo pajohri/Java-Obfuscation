@@ -1,5 +1,5 @@
-# Java-Obfuscation Utility
-Java utility to Obfuscate any kind of sensitive data. Data obfuscation is the process of replacing sensitive information with data that looks like real production information, making it useless to malicious actors. It is primarily used to test the software.
+# Java Data Obfuscation Through Masking (J-DOTM) Utility
+This ia Java utility to Obfuscate any kind of sensitive data. Data obfuscation is the process of replacing sensitive information with data that looks like real production information, making it useless to malicious actors. It is primarily used to test the software.
 _Data masking_, _encryption_, and _tokenization_ are three common data obfuscation techniques.
 
 This utility provides Data obfuscation (or data anonymization) using data _masking techniques _ only (_replacing the real data with randomly generated fake data_). You may create as many combinations as you want, the default is set to 200. There are two majors advantages with this technique: -

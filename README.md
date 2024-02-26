@@ -108,7 +108,7 @@ Yes you can overwrite the rules as per your need.
         1. You want vowels should be randomly shuffled with another vowels only
         2. Numbers should be randomly shuffled with another number only but 0 value should remain unchanged
         3. You want only 100 total combination (default is set to 200)
-        4. You want the utiity is limited to US keyboard character values only (ascii from  32 to 127)
+        4. You want the utiity to work only for US keyboard character only (ascii from  32 to 127)
         5. You want to replace characters ‘(‘, ‘)’ with ‘|’
         
 Here is the full code for the above use case: -  
@@ -117,7 +117,7 @@ Here is the full code for the above use case: -
         map.put(Arrays.asList(new int[] { 'A', 'E', 'I', 'O', 'U' }), 1); // randomly shuffled vowels only uppercase, note second parameter as 1
         map.put(Arrays.asList(new int[] { 'a', 'e', 'i', 'o', 'u' }), 1); // randomly shuffled vowels only lowercase, note second parameter as 1
         map.put(Arrays.asList(new int[] { '0' }), 1); // ensure 0 is replaced with 0
-        map.put(Arrays.asList(new int[] { '(', ')' }, new int[] { '|', '|'}), 1); // ensure to replace ‘(‘, ‘)’ with ‘|’. In this case you have pass second int[] and size must match. That is why we added '|' two times
+        map.put(Arrays.asList(new int[] { '(', ')' }, new int[] { '|', '|'}), 1); // to replace ‘(‘, ‘)’ with ‘|’. In this case you also have to pass the optional second int[] and size must match. That is why I added '|' two times
         PJObfuscateUtil obfuscateUtilObj = new PJObfuscateUtil(100, map, 32, 127, true, 100); //instantiate the utility
         String s1 = "(800) 334-5343";
         String s2 = "John j Jonny";

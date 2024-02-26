@@ -9,9 +9,9 @@ This utility provides Data obfuscation (or data anonymization) using data maskin
 
 Since this is a lightweight standalone Java utility, it needs to be integrated with your ETL or any other system. Any values you wish to configure will be passed to this utility as constructor argument so you can maintain the configuration values the way you wish without any additional overhead. You only need to have either JRE or JDK version 8 or above for this utility to work.
 
-For the data integrity, you must remember to use the exactly same version of the utility along with exactly the same parameters passed through it constructor. At any point in time you take the newer version or modify its parameters, you must ensure to regenerate the obfuscated values across the entire dataset. 
+For the data integrity, you must remember to use the exactly same version of the utility along with exactly the same parameters passed through its constructor. At any point in time you take the newer version or modify its parameters, you must ensure to regenerate the obfuscated values across the entire dataset. 
 
-One additional note that this program will yield the same performance, it is thread-safe and you can obfuscate (_any kind of sensitive data such as email, first/last name, phone number etc_) billions on records in just few minutes.
+This utility is highly performant, it is thread-safe and you can obfuscate (_any kind of sensitive data such as email, first/last name, phone number etc_) billions on records in just few minutes.
 
 Without taking further time, let us understand how to use this utility and how configure it for your need
 

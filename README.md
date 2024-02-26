@@ -2,10 +2,11 @@
 Java Data Obfuscation Through Masking (J-DOTM) is a utility to Obfuscate any kind of sensitive data. Data obfuscation is the process of replacing sensitive information with data that looks like real production information, making it useless to malicious actors. It is primarily used to test the software.
 _Data masking_, _encryption_, and _tokenization_ are three common data obfuscation techniques.
 
-This utility provides Data obfuscation (or data anonymization) using data masking techniques (_replacing the real data with randomly generated fake data_). You may create as many combinations as you want, the default is set to 200. There are two majors advantages with this technique: -
+This utility provides Data obfuscation (or data anonymization) using data masking techniques (_replacing the real data with randomly generated fake data_). You may create as many combinations as you want, the default is set to 200. There are following majors advantages with this technique: -
 
-1. Masked data is still usable in its obfuscated form and maintains the data integrity
-2. Mask values cannot be recovered.
+1. Masked data is usable in its obfuscated form
+2. It also maintains the data integrity
+3. Mask values cannot be recovered.
 
 Since this is a lightweight standalone Java utility, it needs to be integrated with your ETL or any other system. Any values you wish to configure will be passed to this utility as constructor argument so you can maintain the configuration values the way you wish without any additional overhead. You only need to have either JRE or JDK version 8 or above for this utility to work.
 

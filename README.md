@@ -135,7 +135,7 @@ Here is the full code for the above use case: -
         System.out.println(s2 +" -> "+obfuscateUtilObj.getObfuscated(s2));
         System.out.println(s3+ " -> "+obfuscateUtilObj.getObfuscated(s3));
 
-Description of the parameters passed to the constructors above "new PJObfuscateUtil(12345, map, 32, 127, true, 100)" : -
+Description of the parameters passed to the constructors **_new PJObfuscateUtil(12345, map, 32, 127, true, 100)_** : -
 
         1. 1st Parameter is the seed value (that can be any long number)
         2. 2nd Parameter is the  LinkedHashMap. You can use it to overwrite the default 

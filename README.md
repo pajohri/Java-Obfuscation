@@ -14,9 +14,9 @@ For the data integrity, you must remember to use the exactly same version of the
 
 This utility is highly performant, it is thread-safe and you can obfuscate (_any kind of sensitive data such as email, first/last name, phone number etc_) billions of records in just few minutes.
 
-Without taking further time, let us understand how to use this utility and how configure it for your need
+Without taking further time, let us understand how to use this utility and how to configure it for your need
 
-# FAQs
+
 **QUESTION 1 - How to obfuscate  sensitive data such as email, first/last name, phone number?**
 
 See working example below.

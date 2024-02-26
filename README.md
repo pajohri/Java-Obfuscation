@@ -130,10 +130,19 @@ Here is the full code for the above use case: -
 Please note the parameters passed in the constructors as follows: -
 
         1. 1st Parameter is the seed value (that can be any long number)
-        2. 2nd Parameter is the  LinkedHashMap. You can use it to overwrite the default rules for your need. In the int array you can either pass characters itself or its ASCII or Unicode value or the combination of character, ASCII, unicode
-        3. 3rd and 4th parameters are start and end Index. It means only characters whose ASCII value falls in the range of 32 and 127 will be obfuscated and rest of them will be ignored or remain unobfuscated. Passing the start and end index is critical to limit the memory footprint. The bigger the difference between start and end index, higher will be the memory footprint but it does not have any impact on the performance.
-        4. 5th parameter is isCaseInsensitiveObfuscate. If you wish to convert small and cap characters with same random character then pass this value as true
-        5. 6th parameter is maxCombination, it tells how many sets of different random data is maintained by the utility. The higher the number, higher will be the memory footprint but it does not have any impact on the performance.
+        2. 2nd Parameter is the  LinkedHashMap. You can use it to overwrite the default rules for your need. 
+           In the int array you can either pass characters itself or its ASCII or Unicode value or the 
+           combination of character, ASCII, unicode
+        3. 3rd and 4th parameters are start and end Index. It means only characters whose ASCII value falls 
+           in the range of 32 and 127 will be obfuscated and rest of them will be ignored or remain 
+           unobfuscated. Passing the start and end index is critical to limit the memory footprint. 
+           The bigger the difference between start and end index, higher will be the memory footprint but 
+           it does not have any impact on the performance.
+        4. 5th parameter is isCaseInsensitiveObfuscate. If you wish to convert small and cap characters 
+           with same random character then pass this value as true
+        5. 6th parameter is maxCombination, it tells how many sets of different random data is maintained by the 
+           utility. The higher the number, higher will be the memory footprint but it does not have any 
+           impact on the performance.
 
 **QUESTION 10 - Does it support _multilingual_ characters?**
 

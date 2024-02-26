@@ -107,19 +107,27 @@ Yes you can overwrite the rules as per your need.
 
         Let us take one use case
         1. You want vowels should be randomly shuffled with another vowels only
-        2. Numbers should be randomly shuffled with another number only but 0 value should remain unchanged
+        2. Numbers should be randomly shuffled with another number only 
+           but 0 value should remain unchanged
         3. You want only 100 total combination (default is set to 200)
-        4. You want the utiity to work only for US keyboard character only (ascii from  32 to 127)
+        4. You want the utiity to work only for US keyboard character 
+           only (ascii from  32 to 127)
         5. You want to replace characters ‘(‘, ‘)’ with ‘|’
         
 Here is the full code for the above use case: -  
 
         Map<List<int[]>, Integer> map = new LinkedHashMap<>(); // initialize the userMap 
-        map.put(Arrays.asList(new int[] { 'A', 'E', 'I', 'O', 'U' }), 1); // randomly shuffled vowels only uppercase, note second parameter as 1
-        map.put(Arrays.asList(new int[] { 'a', 'e', 'i', 'o', 'u' }), 1); // randomly shuffled vowels only lowercase, note second parameter as 1
-        map.put(Arrays.asList(new int[] { '0' }), 1); // ensure 0 is replaced with 0
-        map.put(Arrays.asList(new int[] { '(', ')' }, new int[] { '|', '|'}), 1); // to replace ‘(‘, ‘)’ with ‘|’. In this case you also have to pass the optional second int[] and size must match. That is why I added '|' two times
-        PJObfuscateUtil obfuscateUtilObj = new PJObfuscateUtil(12345, map, 32, 127, true, 100); //instantiate the utility
+        _// randomly shuffled vowels only uppercase, note second parameter as 1_
+        map.put(Arrays.asList(new int[] { 'A', 'E', 'I', 'O', 'U' }), 1); 
+        // randomly shuffled vowels only lowercase, note second parameter as 1
+        map.put(Arrays.asList(new int[] { 'a', 'e', 'i', 'o', 'u' }), 1); 
+    _    // ensure 0 is replaced with 0_
+        map.put(Arrays.asList(new int[] { '0' }), 1); 
+_        // Replace ‘(‘, ‘)’ with ‘|’. In this case you also have to pass the 
+        // optional second int[] and size must match. That is why I added '|' two times_
+        map.put(Arrays.asList(new int[] { '(', ')' }, new int[] { '|', '|'}), 1); 
+        _//instantiate the utility_
+        PJObfuscateUtil obfuscateUtilObj = new PJObfuscateUtil(12345, map, 32, 127, true, 100); 
         String s1 = "(800) 334-5343";
         String s2 = "John j Jonny";
         String s3 = "Mike.cater@Gmail.Com";
@@ -130,18 +138,23 @@ Here is the full code for the above use case: -
 Please note the parameters passed in the constructors as follows: -
 
         1. 1st Parameter is the seed value (that can be any long number)
-        2. 2nd Parameter is the  LinkedHashMap. You can use it to overwrite the default rules for your need. 
-           In the int array you can either pass characters itself or its ASCII or Unicode value or the 
+        2. 2nd Parameter is the  LinkedHashMap. You can use it to overwrite 
+           the default rules for your need. In the int array you can either 
+           pass characters itself or its ASCII or Unicode value or the 
            combination of character, ASCII, unicode
-        3. 3rd and 4th parameters are start and end Index. It means only characters whose ASCII value falls 
-           in the range of 32 and 127 will be obfuscated and rest of them will be ignored or remain 
-           unobfuscated. Passing the start and end index is critical to limit the memory footprint. 
-           The bigger the difference between start and end index, higher will be the memory footprint but 
+        3. 3rd and 4th parameters are start and end Index. It means only 
+           characters whose ASCII value falls in the range of 32 and 127 
+           will be obfuscated and rest of them will be ignored or remain 
+           unobfuscated. Passing the start and end index is critical to 
+           limit the memory footprint. The bigger the difference between 
+           start and end index, higher will be the memory footprint but 
            it does not have any impact on the performance.
-        4. 5th parameter is isCaseInsensitiveObfuscate. If you wish to convert small and cap characters 
-           with same random character then pass this value as true
-        5. 6th parameter is maxCombination, it tells how many sets of different random data is maintained by the 
-           utility. The higher the number, higher will be the memory footprint but it does not have any 
+        4. 5th parameter is isCaseInsensitiveObfuscate. If you wish to 
+           convert small and cap characters with same random character 
+           then pass this value as true
+        5. 6th parameter is maxCombination, it tells how many sets of 
+           different random data is maintained by the utility. The higher 
+           the number, higher will be the memory footprint but it does not have any 
            impact on the performance.
 
 **QUESTION 10 - Does it support _multilingual_ characters?**

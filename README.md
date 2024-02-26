@@ -150,5 +150,5 @@ YES but I appreciate your feedback or your company name for my reference purpose
 
 **QUESTION 12 - Do you provide professional support if required?**
 
-YES, but I will charge for my time. You can reach out to directly using my email pajohri@yahoo.com
+YES, but I will charge for my time. You can reach out directly to my email pajohri@yahoo.com
 

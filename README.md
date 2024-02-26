@@ -117,16 +117,16 @@ Yes you can overwrite the rules as per your need.
 Here is the full code for the above use case: -  
 
         Map<List<int[]>, Integer> map = new LinkedHashMap<>(); // initialize the userMap 
-        _// randomly shuffled vowels only uppercase, note second parameter as 1_
+        // randomly shuffled vowels only uppercase, note second parameter as 1
         map.put(Arrays.asList(new int[] { 'A', 'E', 'I', 'O', 'U' }), 1); 
         // randomly shuffled vowels only lowercase, note second parameter as 1
         map.put(Arrays.asList(new int[] { 'a', 'e', 'i', 'o', 'u' }), 1); 
-    _    // ensure 0 is replaced with 0_
+        // ensure 0 is replaced with 0
         map.put(Arrays.asList(new int[] { '0' }), 1); 
-_        // Replace ‘(‘, ‘)’ with ‘|’. In this case you also have to pass the 
-        // optional second int[] and size must match. That is why I added '|' two times_
+        // Replace ‘(‘, ‘)’ with ‘|’. In this case you also have to pass the
+        // optional second int[] and size must match. That is why I added '|' two times
         map.put(Arrays.asList(new int[] { '(', ')' }, new int[] { '|', '|'}), 1); 
-        _//instantiate the utility_
+        //instantiate the utility
         PJObfuscateUtil obfuscateUtilObj = new PJObfuscateUtil(12345, map, 32, 127, true, 100); 
         String s1 = "(800) 334-5343";
         String s2 = "John j Jonny";
@@ -138,24 +138,20 @@ _        // Replace ‘(‘, ‘)’ with ‘|’. In this case you also have to
 Please note the parameters passed in the constructors as follows: -
 
         1. 1st Parameter is the seed value (that can be any long number)
-        2. 2nd Parameter is the  LinkedHashMap. You can use it to overwrite 
-           the default rules for your need. In the int array you can either 
-           pass characters itself or its ASCII or Unicode value or the 
-           combination of character, ASCII, unicode
-        3. 3rd and 4th parameters are start and end Index. It means only 
-           characters whose ASCII value falls in the range of 32 and 127 
-           will be obfuscated and rest of them will be ignored or remain 
-           unobfuscated. Passing the start and end index is critical to 
-           limit the memory footprint. The bigger the difference between 
-           start and end index, higher will be the memory footprint but 
-           it does not have any impact on the performance.
-        4. 5th parameter is isCaseInsensitiveObfuscate. If you wish to 
-           convert small and cap characters with same random character 
-           then pass this value as true
-        5. 6th parameter is maxCombination, it tells how many sets of 
-           different random data is maintained by the utility. The higher 
-           the number, higher will be the memory footprint but it does not have any 
-           impact on the performance.
+        2. 2nd Parameter is the  LinkedHashMap. You can use it to overwrite the default 
+           rules for your need. In the int array you can either pass characters itself
+           or its ASCII or Unicode value or the combination of character, ASCII, unicode
+        3. 3rd and 4th parameters are start and end Index. It means only characters whose
+           ASCII value falls in the range of 32 and 127 will be obfuscated and rest of 
+           them will be ignored or remain unobfuscated. Passing the start and end index
+           is critical to limit the memory footprint. The bigger the difference between 
+           start and end index, higher will be the memory footprint but it does not have
+           any impact on the performance.
+        4. 5th parameter is isCaseInsensitiveObfuscate. If you wish to convert small and
+           cap characters with same random character then pass this value as true
+        5. 6th parameter is maxCombination, it tells how many sets of different random 
+           data is maintained by the utility. The higher the number, higher will be the
+           memory footprint but it does not have any impact on the performance.
 
 **QUESTION 10 - Does it support _multilingual_ characters?**
 

@@ -11,10 +11,11 @@ import java.util.regex.Pattern;
 
 /**
  *
- * @author Pankaj Johri
+ * @author Pankaj Johri (pajohri@yahoo.com)
  *        
- *         This standalone lightweight program can be easily integrated to your ETL 
- *         and/or configuration file. You just have to pass the right parameters to its constructor         
+ *         Java Data Obfuscation Through Masking (J-DOTM) Utility is a lightweight program 
+ *         that can be easily integrated to your ETL and/or configuration file. 
+ *         You just have to pass the right parameters to its constructor         
  *         
  *         The purpose of this class it to Obfuscate any kind of sensitive data such as
  *         email, first/last name, phone number etc, and also maintain the data integrity 
@@ -392,89 +393,50 @@ public final class PJObfuscateUtil {
     }
     
     public static void main(String[] args) {   
-//        System.out.println(200%1000);
-////        long start = System.currentTimeMillis();       
-//        Map<List<int[]>, Integer> map = new LinkedHashMap<>();
-////        map.put(Arrays.asList(new int[] { 'A', 'E', 'I', 'O', 'U' }), 1);
-////        map.put(Arrays.asList(new int[] { 'a', 'e', 'i', 'o', 'u' }), 1);
-////        map.put(Arrays.asList(new int[] {'1'}, new int[] {'1'}), 1);
-////        map.put(Arrays.asList(new int[] {'1', '2','3','4','5','6','7','8','9'}), 1);
-//        PJObfuscateUtil obfuscateUtilObj = new PJObfuscateUtil(2336, map, 32, -1, true, 100);
-//        long start = System.currentTimeMillis();   
-//        String s1 = "(512) 507-2470";
-//        String s2 = "+ 1 512 507-2470";
-//        String s3 = "pankaj.johar@gmail.com";
-//        String s4 = "Pankaj.Johar@gmail.com";
-//        String s5 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-//        String s6 = "abcdefghijklmnopqrstuvwxyz";
-//        String s7 = "0123456789";
-//        String s8 = "123 Thank You १२३ शुक्रिया ありがとうございました 谢谢你";
-//        String s9 = "इतनी शक्ति हमें देना दाता, मन का विश्वास कमज़ोर हो ना";
-//        String s10 = "Pankaj";
-//        String s11 = "Johri";
-//        String s12 = "Pankaj Johri";        
-//        List<String> s13_list = Arrays.asList(s1, s2, s3);
-//
-//        System.out.println(s1+" -> "+obfuscateUtilObj.getObfuscated(s1));
-//        System.out.println(s2+" -> "+obfuscateUtilObj.getObfuscated(s2));
-//        System.out.println(s3+" -> "+obfuscateUtilObj.getObfuscated(s3));
-//        System.out.println(s4+" -> "+obfuscateUtilObj.getObfuscated(s4));
-//        System.out.println(s5+" -> "+obfuscateUtilObj.getObfuscated(s5));
-//        System.out.println(s6+" -> "+obfuscateUtilObj.getObfuscated(s6));
-//        System.out.println(s7+" -> "+obfuscateUtilObj.getObfuscated(s7));
-//        System.out.println(s8+" -> "+obfuscateUtilObj.getObfuscated(s8));
-//        System.out.println(s9+" -> "+obfuscateUtilObj.getObfuscated(s9));
-//        
-//        System.out.println(s13_list+" -> "+obfuscateUtilObj.getObfuscated(s13_list));
-//        
-//
-//        System.out.println(s10+" -> "+obfuscateUtilObj.getObfuscated(s10));
-//        System.out.println(s11+" -> "+obfuscateUtilObj.getObfuscated(s11));
-//        System.out.println(s12+" -> <"+obfuscateUtilObj.getObfuscated(s12)+">");
-//        System.out.println(s12+" -> <"+obfuscateUtilObj.getObfuscatedBySpace(s12)+">");
-//            
-//        
-//        long end = System.currentTimeMillis();
-//        System.out.println("Total time - " + (end - start) + " milli seconds");        
+        System.out.println(200%1000);
+//        long start = System.currentTimeMillis();       
+        Map<List<int[]>, Integer> map = new LinkedHashMap<>();
+//        map.put(Arrays.asList(new int[] { 'A', 'E', 'I', 'O', 'U' }), 1);
+//        map.put(Arrays.asList(new int[] { 'a', 'e', 'i', 'o', 'u' }), 1);
+//        map.put(Arrays.asList(new int[] {'1'}, new int[] {'1'}), 1);
+//        map.put(Arrays.asList(new int[] {'1', '2','3','4','5','6','7','8','9'}), 1);
+        PJObfuscateUtil obfuscateUtilObj = new PJObfuscateUtil(2336, map, 32, -1, true, 100);
+        long start = System.currentTimeMillis();   
+        String s1 = "(512) 507-2470";
+        String s2 = "+ 1 512 507-2470";
+        String s3 = "pankaj.johar@gmail.com";
+        String s4 = "Pankaj.Johar@gmail.com";
+        String s5 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        String s6 = "abcdefghijklmnopqrstuvwxyz";
+        String s7 = "0123456789";
+        String s8 = "123 Thank You १२३ शुक्रिया ありがとうございました 谢谢你";
+        String s9 = "इतनी शक्ति हमें देना दाता, मन का विश्वास कमज़ोर हो ना";
+        String s10 = "Pankaj";
+        String s11 = "Johri";
+        String s12 = "Pankaj Johri";        
+        List<String> s13_list = Arrays.asList(s1, s2, s3);
+
+        System.out.println(s1+" -> "+obfuscateUtilObj.getObfuscated(s1));
+        System.out.println(s2+" -> "+obfuscateUtilObj.getObfuscated(s2));
+        System.out.println(s3+" -> "+obfuscateUtilObj.getObfuscated(s3));
+        System.out.println(s4+" -> "+obfuscateUtilObj.getObfuscated(s4));
+        System.out.println(s5+" -> "+obfuscateUtilObj.getObfuscated(s5));
+        System.out.println(s6+" -> "+obfuscateUtilObj.getObfuscated(s6));
+        System.out.println(s7+" -> "+obfuscateUtilObj.getObfuscated(s7));
+        System.out.println(s8+" -> "+obfuscateUtilObj.getObfuscated(s8));
+        System.out.println(s9+" -> "+obfuscateUtilObj.getObfuscated(s9));
         
-//        String fn = "James";
-//        String ln = "james";
-//        String fullName = "James Donald";
-//        String email = "James.Donald@testdomain.com";     
-//        String phone = "(512) 788-9999";     
-//        //instantiate the class by passing a seed value. Seed value will ensure you get the same result. 
-//        //If you change this seed value (any long type number) to a new number you will get a new set of result
-//        PJObfuscateUtil obfuscateUtil = new PJObfuscateUtil(100);
-//        //invoke getObfuscated method to reterive the obfucated value
-//        System.out.println(fn+" -> "+obfuscateUtil.getObfuscated(fn));
-//        System.out.println(ln+" -> "+obfuscateUtil.getObfuscated(ln));
-//        System.out.println(fullName+" -> "+obfuscateUtil.getObfuscatedBySpace(fullName));        
-//        System.out.println(email+" -> "+obfuscateUtil.getObfuscated(email));
-//        System.out.println(phone+" -> "+obfuscateUtil.getObfuscated(phone));
+        System.out.println(s13_list+" -> "+obfuscateUtilObj.getObfuscated(s13_list));
         
-//        String name1 = "JAMES";
-//        String name2 = "james";
-//        PJObfuscateUtil obfuscateUtil = new PJObfuscateUtil(100, true);
-//        System.out.println(name1+" -> "+obfuscateUtil.getObfuscated(name1));
-//        System.out.println(name2+" -> "+obfuscateUtil.getObfuscated(name2));  
+
+        System.out.println(s10+" -> "+obfuscateUtilObj.getObfuscated(s10));
+        System.out.println(s11+" -> "+obfuscateUtilObj.getObfuscated(s11));
+        System.out.println(s12+" -> <"+obfuscateUtilObj.getObfuscated(s12)+">");
+        System.out.println(s12+" -> <"+obfuscateUtilObj.getObfuscatedBySpace(s12)+">");
+            
         
-//        String ph1 = "(123) 456 7890";
-//        String ph2 = "+1 1234567890";
-//        PJObfuscateUtil obfuscateUtil = new PJObfuscateUtil(100, true);
-//        System.out.println("Result -> "+obfuscateUtil.getObfuscated(Arrays.asList(ph1, ph2))); 
-        
-        Map<List<int[]>, Integer> map = new LinkedHashMap<>(); // initialize the userMap 
-        map.put(Arrays.asList(new int[] { 'A', 'E', 'I', 'O', 'U' }), 1); // randomly shuffled vowels only, note second parameter as 1
-        map.put(Arrays.asList(new int[] { 'a', 'e', 'i', 'o', 'u' }), 1); // randomly shuffled vowels only, note second parameter as 1
-        map.put(Arrays.asList(new int[] { '0' }), 1); // ensure 0 is replaced with 0
-        map.put(Arrays.asList(new int[] { '(', ')' }, new int[] { '|', '|'}), 1); // ensure to replace ‘(‘, ‘)’ with ‘|’
-        PJObfuscateUtil obfuscateUtilObj = new PJObfuscateUtil(100, map, 32, 127, true, 100); //instantiate the program
-        String s1 = "(800) 334-5343";
-        String s2 = "John j Jonny";
-        String s3 = "Mike.cater@Gmail.Com";
-        System.out.println(s1 +" -> "+obfuscateUtilObj.getObfuscated(s1));
-        System.out.println(s2 +" -> "+obfuscateUtilObj.getObfuscated(s2));
-        System.out.println(s3+ " -> "+obfuscateUtilObj.getObfuscated(s3));
+        long end = System.currentTimeMillis();
+        System.out.println("Total time - " + (end - start) + " milli seconds");        
         
     }
 }

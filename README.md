@@ -155,7 +155,7 @@ Please note the parameters passed in the constructors as follows: -
 
 **QUESTION 10 - Does it support _multilingual_ characters?**
 
-Yes it does, you can use any language or characters as you wish. Please remember to specify the correct start or end index value else such characters will not be obfuscated. For details around character set and its ASCII/Unicode value, please refer this page
+Yes it does, you can use any language or characters as you wish. Please remember to specify the correct start or end index value else outside range characters will not be obfuscated. For details around character set and its ASCII/Unicode value, please refer this page
 
         https://www.ssec.wisc.edu/~tomw/java/unicode.html
 

@@ -71,7 +71,7 @@ To get the desired output, for the full name, you need to use a utility method g
 
 **QUESTION 5 - I tried to use this utility and noticed that obfuscated values of “_James_” and “_james_” are not exactly same and it will break the data integrity, what should I do?**
 
-You can use another constructor, here is an example. Notice the second argument _isCaseInsensitiveObfuscate_ which is set to **true** (default value is **false**): -
+You can use another constructor argument value set to _true_, here is an example. Notice the second argument _isCaseInsensitiveObfuscate_ which is set to **true** (default value is **false**). If you set this value to _true_, it will ensure upper and lower case will always yeield the same result.
 
         String name1 = "JAMES";
         String name2 = "james";

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://github.com/pajohri/jdotm</loc>
+  <lastmod>2024-02-26T21:20:53+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://github.com/pajohri/jdotm/issues</loc>
+  <lastmod>2024-02-26T21:20:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://github.com/pajohri/jdotm/pulls</loc>
+  <lastmod>2024-02-26T21:20:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://github.com/pajohri/jdotm/actions</loc>
+  <lastmod>2024-02-26T21:20:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://github.com/pajohri/jdotm/security</loc>
+  <lastmod>2024-02-26T21:20:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://github.com/pajohri/jdotm/releases</loc>
+  <lastmod>2024-02-26T21:20:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://github.com/pajohri/jdotm/labels</loc>
+  <lastmod>2024-02-26T21:20:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://github.com/pajohri/jdotm/milestones</loc>
+  <lastmod>2024-02-26T21:20:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://github.com/pajohri/jdotm/labels?sort=name-asc</loc>
+  <lastmod>2024-02-26T21:20:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://github.com/pajohri/jdotm/labels?sort=name-desc</loc>
+  <lastmod>2024-02-26T21:20:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://github.com/pajohri/jdotm/labels?sort=count-desc</loc>
+  <lastmod>2024-02-26T21:20:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://github.com/pajohri/jdotm/labels?sort=count-asc</loc>
+  <lastmod>2024-02-26T21:20:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://github.com/pajohri/jdotm/labels/bug</loc>
+  <lastmod>2024-02-26T21:20:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://github.com/pajohri/jdotm/labels/documentation</loc>
+  <lastmod>2024-02-26T21:20:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://github.com/pajohri/jdotm/labels/duplicate</loc>
+  <lastmod>2024-02-26T21:20:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://github.com/pajohri/jdotm/labels/enhancement</loc>
+  <lastmod>2024-02-26T21:20:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://github.com/pajohri/jdotm/labels/good%20first%20issue</loc>
+  <lastmod>2024-02-26T21:20:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://github.com/pajohri/jdotm/labels/help%20wanted</loc>
+  <lastmod>2024-02-26T21:20:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://github.com/pajohri/jdotm/labels/invalid</loc>
+  <lastmod>2024-02-26T21:20:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://github.com/pajohri/jdotm/labels/question</loc>
+  <lastmod>2024-02-26T21:20:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://github.com/pajohri/jdotm/labels/wontfix</loc>
+  <lastmod>2024-02-26T21:20:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://github.com/pajohri/jdotm/milestones?state=open</loc>
+  <lastmod>2024-02-26T21:20:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://github.com/pajohri/jdotm/milestones?state=closed</loc>
+  <lastmod>2024-02-26T21:20:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://github.com/pajohri/jdotm/milestones?direction=desc&amp;sort=due_date&amp;state=open</loc>
+  <lastmod>2024-02-26T21:20:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://github.com/pajohri/jdotm/milestones?direction=asc&amp;sort=due_date&amp;state=open</loc>
+  <lastmod>2024-02-26T21:20:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://github.com/pajohri/jdotm/milestones?direction=asc&amp;sort=completeness&amp;state=open</loc>
+  <lastmod>2024-02-26T21:20:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://github.com/pajohri/jdotm/milestones?direction=desc&amp;sort=completeness&amp;state=open</loc>
+  <lastmod>2024-02-26T21:20:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://github.com/pajohri/jdotm/milestones?direction=asc&amp;sort=title&amp;state=open</loc>
+  <lastmod>2024-02-26T21:20:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://github.com/pajohri/jdotm/milestones?direction=desc&amp;sort=title&amp;state=open</loc>
+  <lastmod>2024-02-26T21:20:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://github.com/pajohri/jdotm/milestones?direction=desc&amp;sort=count&amp;state=open</loc>
+  <lastmod>2024-02-26T21:20:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://github.com/pajohri/jdotm/milestones?direction=asc&amp;sort=count&amp;state=open</loc>
+  <lastmod>2024-02-26T21:20:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://github.com/pajohri/jdotm/milestones?direction=desc&amp;sort=due_date&amp;state=closed</loc>
+  <lastmod>2024-02-26T21:20:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://github.com/pajohri/jdotm/milestones?direction=asc&amp;sort=due_date&amp;state=closed</loc>
+  <lastmod>2024-02-26T21:20:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://github.com/pajohri/jdotm/milestones?direction=asc&amp;sort=completeness&amp;state=closed</loc>
+  <lastmod>2024-02-26T21:20:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://github.com/pajohri/jdotm/milestones?direction=desc&amp;sort=completeness&amp;state=closed</loc>
+  <lastmod>2024-02-26T21:20:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://github.com/pajohri/jdotm/milestones?direction=asc&amp;sort=title&amp;state=closed</loc>
+  <lastmod>2024-02-26T21:20:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://github.com/pajohri/jdotm/milestones?direction=desc&amp;sort=title&amp;state=closed</loc>
+  <lastmod>2024-02-26T21:20:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://github.com/pajohri/jdotm/milestones?direction=desc&amp;sort=count&amp;state=closed</loc>
+  <lastmod>2024-02-26T21:20:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://github.com/pajohri/jdotm/milestones?direction=asc&amp;sort=count&amp;state=closed</loc>
+  <lastmod>2024-02-26T21:20:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+
+
+</urlset>

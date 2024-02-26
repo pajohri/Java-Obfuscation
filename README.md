@@ -146,7 +146,7 @@ I have also added very basic rules for Arabic, Japanese, and Chinese language ju
 
 **QUESTION 11 - Is this utility free to use?**
 
-YES but I will appreciate your feedback or the your company name for reference purpose only.
+YES but I appreciate your feedback or your company name for my reference purpose only.
 
 **QUESTION 12 - Do you provide professional support if required?**
 

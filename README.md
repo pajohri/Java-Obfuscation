@@ -78,7 +78,7 @@ You can use another constructor, here is an example. Notice the second argument 
         System.out.println(name1+" -> "+obfuscateUtil.getObfuscated(name1));
         System.out.println(name2+" -> "+obfuscateUtil.getObfuscated(name2)); 
 
-**QUESTION 6 - Our production database has redundant data, especially the phone number formats are different in different place. For example one table has phone number as  _(123) 456-7890_ while another table has _+1 1234567890_. Is there a way to ensure same obfuscated value is being generated to ensure the data integrity?**
+**QUESTION 6 - Our production database has redundant data, especially the phone number formats are different in different places. For example one table has phone number as  _(123) 456-7890_ while another table has _+1 1234567890_. Is there a way to ensure same obfuscated value is being generated to ensure the data integrity?**
 
 Yes there is a way. You have to pass all the values in a list to ensure same hash is being used across all the values in that list to yield the same result. Here is an example. Return value will also be List of String values
 

@@ -141,7 +141,7 @@ Yes it does, you can use any language or characters as you wish. Please remember
 
 For the multilingual support, please note that I have implemented only for English and Devanagri. For rest of the languages, you can either add rules into getObfuscatedArray() method or pass it as map as constructor argument. I have not implemented this as I believe for each language you will like to replace numbers with numbers, upper-case to upper-case and lower-case to lower-case. There could be more semantics specific to the language. Since I am not an expert so decided to keep the rules empty and will look forward for your help and support and update the rules eventually.
 
-I have also added very basic rules for Arabic, Japanese, and Chinese language just to show how simple it is, without going into language specific intricacies. If you need any help and support please send me an email pajohri@yahoo.com
+I have also added very basic rules for Arabic, Japanese, and Chinese language just to show how simple it is, without going into language specific intricacies. If you need any help and support please send me an email.
 
 
 **QUESTION 11 - Is this utility free to use?**

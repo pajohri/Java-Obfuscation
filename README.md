@@ -46,11 +46,11 @@ See working example below.
 
 **QUESTION 2 - In the example above, why the first name, last name and full name does not match (_it may break the data integrity_). James converted to _Mtypx_, Donald convert to _Gjonbg_, I would expect _James Donald_ should be “_Mtypx Gjonbg_” instead of “_Zbism Kqhbxk_”?**
 
-As I mentioned above, the default combinations are set to 200 which means whenever you pass any input to getObfuscated() method, for each input it will create a hash value between 0 and 200. Based on the calculated hash, it will decide which combination to use. Since the hash is different for “_James_”, “_Donald_” and “_James Donald_”, combination selected to obfuscate the input value is different. Hence generated values are also different.
+As I mentioned above, the default combinations are set to 200 which means whenever you pass any input value to getObfuscated() method, for each input it will calculate a hash between 0 and 200 (_whatever number of combinations you have configured, default is 200_). Based on the calculated hash, it will decide which combination to use. Since the calculated hash is different for “_James_”, “_Donald_” and “_James Donald_”, combination selected to obfuscate the input value is also different. Hence generated values are different.
 
 **QUESTION 3 - Can I set the combination size from default 200 to 1 to ensure it generates the same obfuscated value the each time?**
 
-Yes you can and value can be passed an an argument to its constructors _(see question 9 below for constructor argument)_  but it is not **recommended**. If somebody can find that ‘J’ is converted to ‘M’ and ‘a’ to ‘t’ and so on, it will be very easy to reverse engineer and malicious actors can hack the system which definitely you don’ t want to do. See the next question on how to deal with this situation..
+Yes you can and value can be passed an an argument to its constructors _(see question 9 below for constructor argument)_  but it is not **recommended**. If somebody can find that ‘J’ is converted to ‘M’ and ‘a’ to ‘t’ and so on, it will be very easy to reverse engineer and malicious actors can hack the system which definitely you don’ t want to do. See the next question on how to deal with this situation.
 
 **QUESTION 4 - I have a database table that has three columns, first_name, last_name and full_name. To ensure data integrity I need to ensure full_name should match with first_name/last_name individually, how can I achieve it?**
 
@@ -146,7 +146,7 @@ I have also added very basic rules for Arabic, Japanese, and Chinese language ju
 
 **QUESTION 11 - Is this utility free to use?**
 
-YES but I appreciate your feedback or your company name for my reference purpose only.
+YES but I appreciate your feedback or your company name for the reference purpose only.
 
 **QUESTION 12 - Do you provide professional support if required?**
 

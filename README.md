@@ -11,7 +11,7 @@ Since this is a lightweight standalone Java utility, it needs to be integrated w
 
 For the data integrity, you must remember to use the exactly same version of the utility along with exactly the same parameters passed through its constructor. At any point in time you take the newer version or modify its parameters, you must ensure to regenerate the obfuscated values across the entire dataset. 
 
-This utility is highly performant, it is thread-safe and you can obfuscate (_any kind of sensitive data such as email, first/last name, phone number etc_) billions on records in just few minutes.
+This utility is highly performant, it is thread-safe and you can obfuscate (_any kind of sensitive data such as email, first/last name, phone number etc_) billions of records in just few minutes.
 
 Without taking further time, let us understand how to use this utility and how configure it for your need
 

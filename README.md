@@ -37,7 +37,7 @@ See working example below.
         System.out.println(phone+" -> "+obfuscateUtil.getObfuscated(phone));
 
 
-        Here is the output I got from this utility: -
+        Here is the output: -
         James -> Mtypx
         Donald -> Gjonbg
         James Donald -> Zbism Kqhbxk

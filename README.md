@@ -1,16 +1,16 @@
 # Java - Data Obfuscation Through Masking (J-DOTM) Utility
-Java Data Obfuscation Through Masking (J-DOTM) is a utility to Obfuscate any kind of sensitive data. Data obfuscation is the process of replacing sensitive information with data that looks like real production information, making it useless to malicious actors. It is primarily used to test the software.
+Java Data Obfuscation Through Masking (J-DOTM) is a utility to Obfuscate any kind of sensitive data. Data obfuscation is the process of replacing sensitive information with data that looks like real production data, making it useless to malicious actors. It is primarily used to test the software.
 _Data masking_, _encryption_, and _tokenization_ are three common data obfuscation techniques.
 
-This utility provides Data obfuscation (or data anonymization) using data masking techniques (_replacing the real data with randomly generated fake data, the data values are changed, but the format remains the same_). You may create as many combinations as you want, the default is set to 200. There are following majors advantages with this technique: -
+This utility provides Data obfuscation (or data anonymization) using data masking techniques (_replacing the real data with randomly generated fake data, the data values are changed, but the format remains the same_). You may create as many random combinations as you want, the default is set to 200. There are following majors advantages with this technique: -
 
 1. Masked data is usable in its obfuscated form
 2. It also maintains the data integrity
 3. Mask values cannot be recovered.
 
-Since this is a lightweight standalone Java utility, it needs to be integrated with your ETL or any other system. Any values you wish to configure will be passed to this utility as constructor argument so you can maintain the configuration values the way you wish without any additional overhead. You only need to have either JRE or JDK version 8 or above for this utility to work.
+Since this is a lightweight standalone Java utility, it needs to be integrated with your ETL or any other system. Any values you wish to configure will be passed to this utility as constructor argument so you can maintain the configuration values the way you wish without any additional overhead. You should use JRE or JDK version 8 or above for this utility to work.
 
-For the data integrity, you must remember to use the exactly same version of the utility along with exactly the same parameters passed through its constructor. At any point in time you take the newer version or modify its parameters, you must ensure to regenerate the obfuscated values across the entire dataset. 
+For the data integrity, you must remember to use the exactly same version of this utility along with exactly the same parameters passed through its constructor. At any point in time you take the revised version or modify its constructor aruguments/parameters, you must ensure to regenerate the obfuscated values across the entire dataset. 
 
 This utility is highly performant, it is thread-safe and you can obfuscate (_any kind of sensitive data such as email, first/last name, phone number etc_) billions of records in just few minutes.
 
@@ -47,7 +47,7 @@ See working example below.
 
 **QUESTION 2 - In the example above, why the first name, last name and full name does not match (_it may break the data integrity_). James converted to _Mtypx_, Donald convert to _Gjonbg_, I would expect _James Donald_ should be “_Mtypx Gjonbg_” instead of “_Zbism Kqhbxk_”?**
 
-As I mentioned above, the default combinations are set to 200 which means whenever you pass any input value to getObfuscated() method, for each input it will calculate a hash between 0 and 200 (_whatever number of combinations you have configured, default is 200_). Based on the calculated hash, it will decide which combination to use. Since the calculated hash is different for “_James_”, “_Donald_” and “_James Donald_”, combination selected to obfuscate the input value is also different. Hence generated values are different.
+As I mentioned above, the default random combinations are set to 200 which means whenever you pass any input value to getObfuscated() method, for each input it will calculate a hash between 0 and 200. Based on the calculated hash, it will decide which combination to use. Since the calculated hash is different for “_James_”, “_Donald_” and “_James Donald_”, combination selected to obfuscate the input value is also different. Hence generated values are different.
 
 **QUESTION 3 - Can I set the combination size from default 200 to 1 to ensure it generates the same obfuscated value the each time?**
 
@@ -109,17 +109,17 @@ Yes you can overwrite the rules as per your need.
         1. You want vowels should be randomly shuffled with another vowels only
         2. Numbers should be randomly shuffled with another number only 
            but 0 value should remain unchanged
-        3. You want only 100 total combination (default is set to 200)
-        4. You want the utiity to work only for US keyboard character 
-           only (ascii from  32 to 127)
+        3. You want only 100 total random combination (default is set to 200)
+        4. You want the utiity to work only for US keyboard characters 
+           (ascii from  32 to 127)
         5. You want to replace characters ‘(‘, ‘)’ with ‘|’
         
 Here is the full code for the above use case: -  
 
         Map<List<int[]>, Integer> map = new LinkedHashMap<>(); // initialize the userMap 
-        // randomly shuffled vowels only uppercase, note second parameter as 1
+        // randomly shuffled UPPERCASE vowels only, add the following line, note second parameter as 1
         map.put(Arrays.asList(new int[] { 'A', 'E', 'I', 'O', 'U' }), 1); 
-        // randomly shuffled vowels only lowercase, note second parameter as 1
+        // randomly shuffled LOWERCASE vowels only, add the following line, note second parameter as 1
         map.put(Arrays.asList(new int[] { 'a', 'e', 'i', 'o', 'u' }), 1); 
         // ensure 0 is replaced with 0
         map.put(Arrays.asList(new int[] { '0' }), 1); 
@@ -159,14 +159,14 @@ Yes it does, you can use any language or characters as you wish. Please remember
 
         https://www.ssec.wisc.edu/~tomw/java/unicode.html
 
-For the multilingual support, please note that I have implemented only for English and Devanagri. For rest of the languages, you can either add rules into getObfuscatedArray() method or pass it as map as constructor argument. I have not implemented this as I believe for each language you will like to replace numbers with numbers, upper-case to upper-case and lower-case to lower-case. There could be more semantics specific to the language. Since I am not an expert so decided to keep the rules empty and will look forward for your help and support and update the rules eventually.
+For the multilingual support, please note that I have implemented only for English and Devanagri. For rest of the languages, you can either add rules into getObfuscatedArray() method or pass it as LinkedHashMap as constructor argument. I have not implemented this as I believe for each language you will like to replace numbers with numbers, upper-case to upper-case and lower-case to lower-case and so on. There could be more semantics specific to the language. Since I am not an expert so decided to keep the rules empty and will look forward for your help and support and update the rules eventually.
 
-I have also added very basic rules for Arabic, Japanese, and Chinese language just to show how simple it is, without going into language specific intricacies. If you need any help and support please send me an email.
+I have also added very basic rules for Arabic, Japanese, and Chinese language just to show how simple it is to add new language, without going into language specific intricacies. If you need any help and support please send me an email.
 
 
 **QUESTION 11 - Is this utility free to use?**
 
-YES but I appreciate your feedback or your company name for the reference purpose only.
+YES but I appreciate your feedback for the reference purpose only.
 
 **QUESTION 12 - Do you provide support if required?**
 

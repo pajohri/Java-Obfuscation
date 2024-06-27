@@ -168,7 +168,7 @@ I have also added very basic rules for Arabic, Japanese, and Chinese language ju
 
 YES but I appreciate your feedback or your company name for the reference purpose only.
 
-**QUESTION 12 - Do you provide professional support if required?**
+**QUESTION 12 - Do you provide support if required?**
 
-YES, you can reach out directly to my email pajohri@yahoo.com
+YES, you can reach out to my email pajohri@yahoo.com
 

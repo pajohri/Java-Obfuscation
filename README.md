@@ -8,7 +8,7 @@ This utility provides Data obfuscation (or data anonymization) using data maskin
 2. It also maintains the data integrity
 3. Mask values cannot be recovered.
 
-Since this is a lightweight standalone Java utility, it needs to be integrated with your ETL or any other system. Any values you wish to configure will be passed to this utility as constructor argument so you can maintain the configuration values the way you wish without any additional overhead. You should use JRE or JDK version 8 or above for this utility to work.
+You need Java 8 or above for this utility to work. Download and copy the utility class in your workspace. This utility consists of a single class file that needs no other dependencies and is self-sufficient. If your organization has any security restrictions, you need not worry about it as you will not be using any other third-party jars that may otherwise impose security alerts. This is indeed a very lightweight utility that should fulfill the business needs. Any values you wish to configure will be passed to this utility as a constructor argument so you can maintain the configuration values the way you wish without any additional overhead.
 
 For the data integrity, you must remember to use the exactly same version of this utility along with exactly the same parameters passed through its constructor. At any point in time you take the revised version or modify its constructor aruguments/parameters, you must ensure to regenerate the obfuscated values across the entire dataset. 
 
@@ -19,7 +19,7 @@ Without taking further time, let us understand how to use this utility and how t
 
 **QUESTION 1 - How to obfuscate  sensitive data such as email, first/last name, phone number?**
 
-See working example below.
+See working example below (_I also suggest, please read the Javadocs in the class file in addition to the these FAQs_).
 
         String fn = "James";
         String ln = "Donald";

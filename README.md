@@ -19,7 +19,7 @@ Without taking further time, let us understand how to use this utility and how t
 
 **QUESTION 1 - How to obfuscate  sensitive data such as email, first/last name, phone number?**
 
-See working example below (_I also suggest, please read the Javadocs in the class file in addition to the these FAQs_).
+See working example below (_I do suggest, read the Javadocs in the class file as well_).
 
         String fn = "James";
         String ln = "Donald";

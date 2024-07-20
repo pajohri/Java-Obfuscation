@@ -93,7 +93,7 @@ Yes there is a way. You have to pass all the values in a list to ensure same has
 
 **QUESTION 7 - I noticed there is another utility method that you called out above _getObfuscatedBySpace(String)_, how is this different from passing a list of elements?**
 
-Good question. When you pass list of String elements, you essentially use the same hash value that is being generated from the first list element to the rest of all the remaining list values.
+When you pass list of String elements, you essentially use the same hash value that is being generated from the first list element to the rest of all the remaining list values.
 
 But when you use   _getObfuscatedBySpace_() method instead, each word between white spaces are treated as individual input value that can yield separate hash value. You have to decide which option is suited for your need and invoke the right method accordingly. 
 
